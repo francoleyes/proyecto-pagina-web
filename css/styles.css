@@ -11,7 +11,7 @@ body{
     font-family: 'Josefin Sans', sans-serif;
 }
 
-/* Estilos del index */
+/* Estilos */
 
 .contenedor{
     min-height: 100vh;
@@ -26,10 +26,6 @@ body{
 
 .whatsapp{
     display: none;
-    position: fixed;
-    right: 1.6rem;
-    bottom: 1rem;
-    z-index: 2;
 }
 
 /* Header */
@@ -122,13 +118,13 @@ body{
 }
 
 .seccion__imagenes img{
-    width: 70%;
+    width: 80%;
     display:block;
     margin:auto;
 }
 
 .seccion__imagenes iframe{
-    width: 70%;
+    width: 80%;
     display:block;
     margin:auto;
 }
@@ -144,6 +140,7 @@ body{
     background-color: #A020F0;
     color: whitesmoke;
     padding: 1rem 0;
+    align-items: center;
 } 
 
 
@@ -186,7 +183,7 @@ body{
 /* Formulario */
 
 .formulario{
-	width:70%;
+	width:90%;
 	border-radius:1rem;
 	background-color:#6a1b9a;
     color: whitesmoke;
@@ -246,8 +243,236 @@ body{
 }
 
 .img_descripcion{
+    margin-top: 0.5rem;
     text-align: center;
 }
 
 /* Media queries */
 
+@media screen and (min-width: 480px) and (max-width: 991px)  {
+
+    /* Icono de whatsapp */
+    .whatsapp{
+        display: block;
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 2;
+    }
+
+    /* Header */
+    .encabezado{
+        height: 8rem;
+    }
+    .encabezado__menu ul{
+        display: flex; 
+        gap: 1.6rem;
+    }
+
+    /* Main */
+    .principal{
+        width: 75%;
+    }
+    
+    .principal__img{
+        display: block;
+        width: 75%;
+    }
+
+    /* Section */
+    .seccion{
+        width: 75%;
+    }
+
+    /* Footer */
+    .pie__mapa{
+        display: block;
+    }
+
+    /* Carta */
+    .carta{
+        grid-template-rows: 0.3fr repeat(4,1fr);
+        grid-template-columns: auto auto;
+        grid-template-areas: 
+                            "titulo titulo"
+                            "img01 img02"
+                            "img03 img04"
+                            "img05 img06"
+                            "img07 img08";
+        justify-content: center;
+        row-gap: 1rem;
+    }
+    .carta div a img{
+        width: 70%;
+        display:block;
+        margin:auto;
+    }
+
+    .carta__titulo{
+        grid-area: titulo;
+    }
+    .img01{
+        grid-area: img01;
+    }
+
+    .img02{
+        grid-area: img02;
+    }
+
+    .img03{
+        grid-area: img03;
+    }
+
+    .img04{
+        grid-area: img04;
+    }
+
+    .img05{
+        grid-area: img05;
+    }
+
+    .img06{
+        grid-area: img06;
+    }
+
+    .img07{
+        grid-area: img07;
+    }
+
+    .img08{
+        grid-area: img08;
+    }
+
+
+}
+
+@media screen and (min-width: 992px){
+
+    /* Icono de whatsapp */
+    .whatsapp{
+        display: block;
+        position: fixed;
+        right: 0.2rem;
+        bottom: 0.5rem;
+        z-index: 2;
+    }
+
+    /* Header */
+    .encabezado{
+        height: 5rem;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        position: sticky;
+        top: 0;
+    }
+
+    .encabezado__menu ul{
+        display: flex; 
+        gap: 2rem;
+    }
+
+    .encabezado__menu ul li{
+        padding: 0;
+    }
+
+    .encabezado__logo{
+        margin: 0;
+    }
+
+    /* Main */
+    .principal{
+        flex-direction: row;
+    }
+
+    .principal__img{
+        display: block;
+        width: 50%;
+    }
+
+    /* Section */
+    .seccion{
+        flex-direction: row;
+        padding: 2rem;
+        justify-content: center;
+    }
+    .seccion__texto{
+        width: 50%;
+    }
+    .seccion__imagenes{
+        width: 50%;
+    }
+    .seccion__imagenes iframe{
+        width: 100%;
+    }
+
+    /* Footer */
+    .pie__principal{
+        flex-direction: row;
+        justify-content: center;
+        gap: 5rem;
+    }
+    .pie__mapa{
+        display: block;
+    }
+    .pie__redes{
+        text-transform: uppercase;
+    }
+
+    /* Carta */
+    .carta{
+        grid-template-rows: 0.3fr repeat(3,1fr);
+        grid-template-columns: repeat(7,1fr);
+        row-gap: 1rem;
+    }
+    .carta div a img{
+        width: 100%;
+    }
+
+    .carta__titulo{
+        grid-row: 1/2;
+        grid-column: 3/6;
+    }
+    .img01{
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+
+    .img02{
+        grid-row: 2/3;
+        grid-column: 4/5;
+    }
+
+    .img03{
+        grid-row: 2/3;
+        grid-column: 6/7;
+    }
+
+    .img04{
+        grid-row: 3/4;
+        grid-column: 2/3;
+    }
+
+    .img05{
+        grid-row: 3/4;
+        grid-column: 4/5;
+    }
+
+    .img06{
+        grid-row: 3/4;
+        grid-column: 6/7;
+    }
+
+    .img07{
+        grid-row: 4/5;
+        grid-column: 3/4;
+    }
+
+    .img08{
+        grid-row: 4/5;
+        grid-column: 5/6;
+    }
+
+
+}

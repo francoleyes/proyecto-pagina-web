@@ -1,2 +1,2 @@
 # proyectoCoderhouse
-Es la página web del curso de desarrollo web
+Es la sitio web del curso de desarrollo web de coderhouse
