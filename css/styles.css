@@ -401,16 +401,15 @@ body{
 
     /* Footer */
     .pie__principal{
+        width: 100%;
         flex-direction: row;
-        justify-content: center;
-        gap: 5rem;
+        justify-content: space-between;
+        padding: 0 4rem;
     }
     .pie__mapa{
         display: block;
     }
-    .pie__redes{
-        text-transform: uppercase;
-    }
+
 
     /* Carta */
     .carta{
