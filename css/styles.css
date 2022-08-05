@@ -112,7 +112,7 @@ body{
 }
 
 .seccion__titulo{
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 400;
     margin-bottom: 0.5rem;
 }
@@ -122,13 +122,6 @@ body{
     display:block;
     margin:auto;
 }
-
-.seccion__imagenes iframe{
-    width: 80%;
-    display:block;
-    margin:auto;
-}
-
 
 /* Footer */
 
@@ -282,6 +275,7 @@ body{
     /* Section */
     .seccion{
         width: 75%;
+        align-content: center;
     }
 
     /* Footer */
@@ -366,6 +360,7 @@ body{
 
         position: sticky;
         top: 0;
+        z-index: 2;
     }
 
     .encabezado__menu ul{
@@ -401,9 +396,6 @@ body{
         width: 50%;
     }
     .seccion__imagenes{
-        width: 50%;
-    }
-    .seccion__imagenes iframe{
         width: 50%;
     }
 
