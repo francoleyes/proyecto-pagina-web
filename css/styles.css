@@ -144,7 +144,6 @@ body{
     align-items: center;
 }
 
-
 .pie__titulo{
     font-size: 1rem;
 }
@@ -381,9 +380,11 @@ body{
         flex-direction: row;
     }
 
+    .principal__texto{
+        width: 50%;
+    }
     .principal__img{
         display: block;
-        width: 50%;
     }
 
     /* Section */
@@ -399,15 +400,32 @@ body{
         width: 50%;
     }
 
+    .seccion__texto--orden{
+        order: 2;
+    }
+    .seccion__imagenes--orden{
+        order: 1;
+    }
+
     /* Footer */
+
     .pie__principal{
         width: 100%;
         flex-direction: row;
-        justify-content: space-between;
         padding: 0 4rem;
+    }
+    .pie__texto{
+        width: 33.33%;
     }
     .pie__mapa{
         display: block;
+        width: 33.33%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .pie__redes{
+        width: 33.33%;
     }
 
 
