@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/c08f3196dd.js" crossorigin="anonymous"></script>
+	<!-- Animaciones -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
 	<link rel="stylesheet" href="../css/styles.css">
 	<link rel="shortcut icon" href="../img/favicon.png">
     <title> Vicentica - Galería </title>
@@ -28,14 +32,14 @@
 			<a href="https://api.whatsapp.com/send/?phone=542613384973&text=Hola%21+me+comunico+desde+Quierolacarta%21+Hay+alguien+por+ah%C3%AD%3F+tengo+una+consulta%21&type=phone_number&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp fa-3x" style="color: #25D366;"></i></a>
 		</div>
 
-		<main class="principal">
+		<main class="principal" data-aos="fade-right">
 			<div class="principal__texto">
 				<h1>Tortas y Tartas</h1>
 				<p> ¿Queres probar nuestras más ricas exquisiteces?</p>
 			</div>
 		</main>
 
-		<section class="seccion">
+		<section class="seccion" data-aos="fade-left">
 			<div class="seccion__texto">
 				<p class="seccion__titulo"> GANACHE DE CHOCOLATE </p>
 			</div>
@@ -44,7 +48,7 @@
 			</div>
 		</section>
 
-		<section class="seccion">
+		<section class="seccion" data-aos="fade-right">
 			<div class="seccion__texto seccion__texto--orden">
 				<p class="seccion__titulo"> SELVA NEGRA </p>
 			</div>
@@ -53,21 +57,21 @@
 			</div>
 		</section>
 
-		<section class="seccion">
+		<section class="seccion" data-aos="fade-left">
 			<div class="seccion__texto">
 				<p class="seccion__titulo"> TIRAMISÚ </p>
 			</div>
 			<div class="seccion__imagenes">
-				<img src="../img/tortas/tiramisu.jpg" alt="Foto de tiramisú"">
+				<img src="../img/tortas/tiramisu.jpg" alt="Foto de tiramisú">
 			</div>
 		</section>
 
-		<section class="seccion">
+		<section class="seccion" data-aos="fade-right">
 			<div class="seccion__texto seccion__texto--orden">
 				<p class="seccion__titulo"> MARQUISSE DE CHOCOLATE </p>
 			</div>
 			<div class="seccion__imagenes seccion__imagenes--orden">
-				<img src="../img/tortas/marquisse.jpg" alt="Foto de torta marquisse de chocolate"">
+				<img src="../img/tortas/marquisse.jpg" alt="Foto de torta marquisse de chocolate">
 			</div>
 		</section>
 
@@ -101,5 +105,11 @@
 
 	</div>
     
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			duration:1000
+		});
+	</script>
 </body>
 </html>

@@ -335,8 +335,6 @@ body{
     .img08{
         grid-area: img08;
     }
-
-
 }
 
 @media screen and (min-width: 992px){
@@ -368,11 +366,16 @@ body{
     }
 
     .encabezado__menu ul li{
-        padding: 0;
+        padding: 0.5rem;
+        border:1px solid #A020F0;
+	    border-radius:1rem;
     }
 
     .encabezado__logo{
         margin: 0;
+    }
+    .encabezado__logo a img{
+        margin-bottom: 0;
     }
 
     /* Main */
@@ -385,13 +388,14 @@ body{
     }
     .principal__img{
         display: block;
+        width: 50%;
     }
 
     /* Section */
     .seccion{
         flex-direction: row;
         padding: 2rem;
-        justify-content: center;
+        justify-content: center; 
     }
     .seccion__texto{
         width: 50%;
@@ -483,5 +487,14 @@ body{
         grid-column: 5/6;
     }
 
+    /* Transformaciones */
+    .encabezado__logo:hover,.whatsapp:hover,.pie__redes div a:hover{
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    .encabezado__menu ul li:hover{
+        border-color: #4a0072;
+        transition: 0.5s;
+    }
 
 }

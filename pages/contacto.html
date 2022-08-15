@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/c08f3196dd.js" crossorigin="anonymous"></script>
+	<!-- Animaciones -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
 	<link rel="stylesheet" href="../css/styles.css">
 	<link rel="shortcut icon" href="../img/favicon.png">
     <title> Vicentica - Contacto</title>
@@ -29,13 +33,13 @@
 		</div>
 
 		
-		<main class="principal">
+		<main class="principal" data-aos="fade-right">
 			<div class="principal__texto">
 				<h1> CONTACTO </h1>
 			</div>
 		</main>
 
-		<section class="seccion">
+		<section class="seccion" data-aos="fade-left">
 			<form class="formulario"> 
 				<fieldset>
 					<legend>Contactate con nosotros !</legend>
@@ -108,5 +112,11 @@
 
 	</div>
 
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			duration:1000
+		});
+	</script>
 </body>
 </html>

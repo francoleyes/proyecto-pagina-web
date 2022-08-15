@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/c08f3196dd.js" crossorigin="anonymous"></script>
+	<!-- Animaciones -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
 	<link rel="stylesheet" href="../css/styles.css">
 	<link rel="shortcut icon" href="../img/favicon.png">
 	<script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
@@ -29,14 +33,14 @@
 			<a href="https://api.whatsapp.com/send/?phone=542613384973&text=Hola%21+me+comunico+desde+Quierolacarta%21+Hay+alguien+por+ah%C3%AD%3F+tengo+una+consulta%21&type=phone_number&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp fa-3x" style="color: #25D366;"></i></a>
 		</div>
 
-		<main class="principal">
+		<main class="principal" data-aos="fade-right">
 			<div class="principal__texto">
 				<h1> VICENTICA</h1>
 				<p> Café & Pastelería</p>
 			</div>
 		</main>
 
-		<section class="seccion">
+		<section class="seccion" data-aos="fade-left">
 			<div class="seccion__texto seccion__texto--orden">
 				<p class="seccion__titulo"> SOBRE NOSOTROS </p>
 				<p>Somos un emprendimiento familiar que  se inició el 4 de Marzo de 2013. Aquí podrás encontrar nuestra exquisita pastelería artesanal con y sin TACC, junto con un increíble café. Acompañado de unas ricas medialunas y tortitas, asi como también  un montón de productos de excelente calidad que ofrecemos para ustedes, nuestros queridos clientes.</p>
@@ -46,7 +50,7 @@
 			</div>
 		</section>
 
-		<section class="seccion">
+		<section class="seccion" data-aos="fade-right">
 			<div class="seccion__texto">
 				<p class="seccion__titulo"> NUESTRA CAFETERÍA </p>
 				<p>Los esperamos de Lunes a Sábados en horario corrido de 9:00hs a 21:30hs y Domingos de 9:00hs a 13:30hs. Agradecemos tu visita</p>
@@ -83,5 +87,13 @@
 
 		</footer>
 	</div>
+
+
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			duration:1000
+		});
+	</script>
 </body>
 </html>
