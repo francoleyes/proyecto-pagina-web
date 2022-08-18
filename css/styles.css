@@ -7,6 +7,7 @@
     box-sizing: border-box;
 }
 
+
 body{
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -17,7 +18,7 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.7rem;
     align-items: center;
     justify-content: space-between;
 }
@@ -33,10 +34,9 @@ body{
     width: 100%;
     background-color: #A020F0;
 
-    height: 16rem;
+    height: 14rem;
 
     display: flex;
-    flex-direction: column;
 
     align-items: center;
     justify-content: center;
@@ -45,19 +45,18 @@ body{
 }
 
 .encabezado__logo{
-    margin-bottom: 0.5rem;
+    width: 40%;
 }
 .encabezado__logo a img{
-    width: 15%;
+    width: 8rem;
     display:block;
     margin:auto;
-    margin-bottom: 0.5rem;
 }
 
 .encabezado__menu ul li{
     list-style-type: none;
     text-align: center;
-    padding-bottom: 0.7rem;
+    padding-bottom: 0;
 }
 
 .encabezado__menu ul li a{
@@ -135,6 +134,9 @@ body{
     padding: 1rem 0;
     align-items: center;
 } 
+.pie p{
+    margin: 0;
+}
 
 
 .pie__principal{
@@ -172,45 +174,6 @@ body{
     margin-top: 1rem;
 }
 
-/* Formulario */
-
-.formulario{
-	width:90%;
-	border-radius:1rem;
-	background-color:#6a1b9a;
-    color: whitesmoke;
-}
-
-.formulario label{
-	width:90%;
-    border-radius:0.5rem;
-	font-weight:bold;
-	display:inline-block;
-    color: #000;
-}
-
-.formulario input[type="text"],
-.formulario input[type="email"]{
-	width:100%;
-    height: 2rem;
-	padding: 0.2rem 0.8rem;
-	border:0.1rem solid #f6f6f6;
-	border-radius:0.2rem;
-	background-color:#f6f6f6;
-	margin:0.6rem 0;
-	display:inline-block;
-}
-
-.formulario input[type="submit"]{
-	width:100%;
-	padding:0.5rem 1rem;
-	margin-top:0.5rem;
-	border:1px solid #000;
-	border-radius:0.8rem;
-	display:block;
-	color:#fff;
-	background-color:#000;
-} 
 
 /* Carta */
 
@@ -239,6 +202,25 @@ body{
     text-align: center;
 }
 
+/* Bootstrap */
+
+.container-fluid{
+    --bs-gutter-x: 0;
+}
+
+.card__formulario{
+    width:70%;
+}
+
+.card__boton{
+    background-color: #4a0072;
+    width: 100%;
+}
+
+.precio{
+    color: rgb(47, 155, 47);
+}
+
 /* Media queries */
 
 @media screen and (min-width: 480px) and (max-width: 991px)  {
@@ -253,13 +235,23 @@ body{
     }
 
     /* Header */
-    .encabezado{
-        height: 8rem;
+    .encabezado{    
+        flex-direction: column;
+        height: 12rem;
+        gap: 1rem;
     }
+    .encabezado__logo{
+        height: 50%;
+    }
+    .encabezado__logo a img{
+        width: 5.5rem;
+    }
+
     .encabezado__menu ul{
-        display: flex; 
-        gap: 1.6rem;
+        display: flex;
+        gap: 1rem;
     }
+
 
     /* Main */
     .principal{
@@ -335,6 +327,13 @@ body{
     .img08{
         grid-area: img08;
     }
+
+    /* Bootstrap */
+
+    .card__formulario{
+        width: 10rem;
+    }
+
 }
 
 @media screen and (min-width: 992px){
@@ -353,8 +352,6 @@ body{
         height: 5rem;
         flex-direction: row;
         justify-content: space-around;
-        align-items: center;
-
         position: sticky;
         top: 0;
         z-index: 2;
@@ -362,6 +359,8 @@ body{
 
     .encabezado__menu ul{
         display: flex; 
+        margin: 0;
+        padding-left: 0;
         gap: 2rem;
     }
 
@@ -375,6 +374,7 @@ body{
         margin: 0;
     }
     .encabezado__logo a img{
+        width: 4rem;
         margin-bottom: 0;
     }
 
@@ -487,6 +487,12 @@ body{
         grid-column: 5/6;
     }
 
+    /* Bootstrap */
+
+    .card__formulario{
+        width: 35%;
+    }
+
     /* Transformaciones */
     .encabezado__logo:hover,.whatsapp:hover,.pie__redes div a:hover{
         transform: scale(1.1);
@@ -496,5 +502,7 @@ body{
         border-color: #4a0072;
         transition: 0.5s;
     }
+
+    
 
 }
