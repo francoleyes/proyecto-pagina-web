@@ -18,7 +18,7 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 1.7rem;
+    gap: 1.9rem;
     align-items: center;
     justify-content: space-between;
 }
@@ -116,7 +116,7 @@ body{
     margin-bottom: 0.5rem;
 }
 
-.seccion__imagenes img{
+.seccion__imagenes img,.seccion__imagenes--carta img{
     width: 80%;
     display:block;
     margin:auto;
@@ -177,6 +177,11 @@ body{
 
 /* Carta */
 
+.seccion__carta{
+    display: flex;
+    justify-content: center;
+}
+
 .carta{
     width: 90%;
     font-weight: bold;
@@ -188,6 +193,7 @@ body{
     align-items: center;
 
     row-gap: 1rem;
+    color: whitesmoke;
 }
 
 .carta__titulo{
@@ -217,9 +223,16 @@ body{
     width: 100%;
 }
 
+.card__espaciado{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .precio{
     color: rgb(47, 155, 47);
 }
+
 
 /* Media queries */
 
@@ -275,6 +288,7 @@ body{
     }
 
     /* Carta */
+
     .carta{
         grid-template-rows: 0.3fr repeat(4,1fr);
         grid-template-columns: auto auto;
@@ -331,9 +345,12 @@ body{
     /* Bootstrap */
 
     .card__formulario{
-        width: 10rem;
+        width: 50%;
     }
 
+    .card__ancho{
+        width: 30%;
+    }
 }
 
 @media screen and (min-width: 992px){
@@ -439,6 +456,9 @@ body{
         grid-template-columns: repeat(7,1fr);
         row-gap: 1rem;
     }
+    .seccion__imagenes--carta img{
+        width: 100%;
+    }
     .carta div a img{
         width: 100%;
     }
@@ -493,8 +513,12 @@ body{
         width: 35%;
     }
 
+    .card__ancho{
+        width: 20%;
+    }
+
     /* Transformaciones */
-    .encabezado__logo:hover,.whatsapp:hover,.pie__redes div a:hover{
+    .encabezado__logo:hover,.pie__redes div a:hover{
         transform: scale(1.1);
         transition: 0.5s;
     }
@@ -502,7 +526,10 @@ body{
         border-color: #4a0072;
         transition: 0.5s;
     }
-
+    .whatsapp:hover{
+        transform: rotate(45deg);
+        transition: 0.5s;
+    }
     
 
 }
