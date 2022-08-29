@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap");
+.contenedor, .contenedor .principal, .contenedor .seccion, .contenedor .pie, .contenedor .pie .pie__principal, .contenedor .pie .pie__principal .pie__redes, .contenedor .container .row div .card__espaciado, .contenedor .encabezado, .contenedor .pie .pie__principal .pie__redes div, .contenedor .pie .pie__derechos, .contenedor .seccion__carta {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.contenedor, .contenedor .principal, .contenedor .seccion, .contenedor .pie, .contenedor .pie .pie__principal, .contenedor .pie .pie__principal .pie__redes, .contenedor .container .row div .card__espaciado {
+  flex-direction: column; }
+
 * {
   margin: 0;
   padding: 0;
@@ -8,20 +16,14 @@
 /* Estilos */
 .contenedor {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  gap: 1.9rem;
-  align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  gap: 1.9rem; }
   .contenedor .whatsapp {
     display: none; }
   .contenedor .encabezado {
     width: 100%;
-    background-color: #A020F0;
+    background-color: #b76bf9;
     height: 14rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-bottom: 1px solid #4a0072; }
     .contenedor .encabezado .encabezado__logo {
       width: 40%; }
@@ -35,16 +37,13 @@
       padding-bottom: 0; }
       .contenedor .encabezado .encabezado__menu ul li a {
         text-decoration: none;
+        text-align: center;
         font-size: 1.4rem;
         font-weight: 400;
         color: whitesmoke; }
   .contenedor .principal {
     width: 90%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
-    justify-content: center; }
+    gap: 1.5rem; }
     .contenedor .principal .principal__texto {
       text-align: center;
       font-size: 1.3rem; }
@@ -54,21 +53,23 @@
         margin-bottom: 0.5rem; }
     .contenedor .principal .principal__img {
       display: none; }
+    .contenedor .principal .card__boton {
+      background-color: #b76bf9;
+      color: whitesmoke;
+      border: 1px solid #4a0072; }
   .contenedor .seccion {
     background-color: #263238;
     width: 90%;
-    display: flex;
-    flex-direction: column;
     gap: 1.5rem;
-    align-items: center;
     padding: 1rem 0; }
     .contenedor .seccion .seccion__texto {
       text-align: center;
-      color: whitesmoke;
       font-size: 1.3rem;
+      color: whitesmoke;
       font-weight: 300;
       width: 70%; }
     .contenedor .seccion .seccion__titulo {
+      text-align: center;
       font-size: 2rem;
       font-weight: 400;
       margin-bottom: 0.5rem; }
@@ -81,43 +82,29 @@
       display: block;
       margin: auto; }
   .contenedor .pie {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    background-color: #A020F0;
+    background-color: #b76bf9;
     color: whitesmoke;
-    padding: 1rem 0;
-    align-items: center; }
+    padding: 1rem 0; }
     .contenedor .pie p {
       margin: 0; }
     .contenedor .pie .pie__principal {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      align-items: center; }
+      gap: 1rem; }
       .contenedor .pie .pie__principal .pie__texto .pie__titulo {
+        text-align: center;
         font-size: 1rem; }
       .contenedor .pie .pie__principal .pie__mapa {
         display: none; }
       .contenedor .pie .pie__principal .pie__redes {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 1rem; }
-        .contenedor .pie .pie__principal .pie__redes div {
-          display: flex; }
-          .contenedor .pie .pie__principal .pie__redes div a {
-            margin: 0 2rem; }
+        .contenedor .pie .pie__principal .pie__redes div a {
+          margin: 0 2rem; }
     .contenedor .pie .pie__derechos {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       margin-top: 1rem; }
   .contenedor .seccion__carta {
-    display: flex;
-    justify-content: center; }
+    width: 90%; }
     .contenedor .seccion__carta .carta {
-      width: 90%;
+      width: 100%;
       font-weight: bold;
       display: grid;
       grid-template-rows: 0.3fr repeat(8, 1fr);
@@ -127,6 +114,7 @@
       row-gap: 1rem;
       color: whitesmoke; }
       .contenedor .seccion__carta .carta .carta__titulo {
+        text-align: center;
         font-size: 2.5rem;
         font-weight: 400;
         margin-bottom: 0.5rem;
@@ -134,18 +122,19 @@
       .contenedor .seccion__carta .carta .seccion__imagenes--carta .img_descripcion {
         margin-top: 0.5rem;
         text-align: center; }
-  .contenedor .container-fluid {
-    /* Bootstrap */
-    --bs-gutter-x: 0; }
   .contenedor .container .row div .card__boton {
     background-color: #4a0072;
     width: 100%; }
   .contenedor .container .row div .card__espaciado {
-    display: flex;
-    flex-direction: column;
     justify-content: space-between; }
   .contenedor .container .row div .precio {
     color: #2f9b2f; }
+  .contenedor .container .row .card__titulo {
+    text-align: center;
+    font-size: 2rem;
+    color: #263238; }
+  .contenedor .container .row .card__ancho {
+    width: 80%; }
   @media screen and (min-width: 480px) and (max-width: 991px) {
     .contenedor .whatsapp {
       display: block;
@@ -174,34 +163,36 @@
       align-content: center; }
     .contenedor .pie .pie__principal .pie__mapa {
       display: block; }
-    .contenedor .seccion__carta .carta {
-      grid-template-rows: 0.3fr repeat(4, 1fr);
-      grid-template-columns: auto auto;
-      grid-template-areas: "titulo titulo" "img01 img02" "img03 img04" "img05 img06" "img07 img08";
-      justify-content: center;
-      row-gap: 1rem; }
-      .contenedor .seccion__carta .carta div a img {
-        width: 70%;
-        display: block;
-        margin: auto; }
-      .contenedor .seccion__carta .carta .carta__titulo {
-        grid-area: titulo; }
-      .contenedor .seccion__carta .carta .img01 {
-        grid-area: img01; }
-      .contenedor .seccion__carta .carta .img02 {
-        grid-area: img02; }
-      .contenedor .seccion__carta .carta .img03 {
-        grid-area: img03; }
-      .contenedor .seccion__carta .carta .img04 {
-        grid-area: img04; }
-      .contenedor .seccion__carta .carta .img05 {
-        grid-area: img05; }
-      .contenedor .seccion__carta .carta .img06 {
-        grid-area: img06; }
-      .contenedor .seccion__carta .carta .img07 {
-        grid-area: img07; }
-      .contenedor .seccion__carta .carta .img08 {
-        grid-area: img08; }
+    .contenedor .seccion__carta {
+      width: 75%; }
+      .contenedor .seccion__carta .carta {
+        grid-template-rows: 0.3fr repeat(4, 1fr);
+        grid-template-columns: auto auto;
+        grid-template-areas: "titulo titulo" "img01 img02" "img03 img04" "img05 img06" "img07 img08";
+        justify-content: center;
+        row-gap: 1rem; }
+        .contenedor .seccion__carta .carta div a img {
+          width: 70%;
+          display: block;
+          margin: auto; }
+        .contenedor .seccion__carta .carta .carta__titulo {
+          grid-area: titulo; }
+        .contenedor .seccion__carta .carta .img01 {
+          grid-area: img01; }
+        .contenedor .seccion__carta .carta .img02 {
+          grid-area: img02; }
+        .contenedor .seccion__carta .carta .img03 {
+          grid-area: img03; }
+        .contenedor .seccion__carta .carta .img04 {
+          grid-area: img04; }
+        .contenedor .seccion__carta .carta .img05 {
+          grid-area: img05; }
+        .contenedor .seccion__carta .carta .img06 {
+          grid-area: img06; }
+        .contenedor .seccion__carta .carta .img07 {
+          grid-area: img07; }
+        .contenedor .seccion__carta .carta .img08 {
+          grid-area: img08; }
     .contenedor .container .row .card__ancho {
       width: 30%; }
     .contenedor .container-fluid .card__formulario {
@@ -227,7 +218,7 @@
         gap: 2rem; }
         .contenedor .encabezado .encabezado__menu ul li {
           padding: 0.5rem;
-          border: 1px solid #A020F0;
+          border: 1px solid #b76bf9;
           border-radius: 1rem; }
       .contenedor .encabezado .encabezado__logo {
         margin: 0; }
@@ -241,6 +232,8 @@
       .contenedor .principal .principal__img {
         display: block;
         width: 50%; }
+      .contenedor .principal .card__boton:hover {
+        background-color: #4a0072; }
     .contenedor .seccion {
       flex-direction: row;
       padding: 2rem;

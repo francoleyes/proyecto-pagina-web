@@ -1,4 +1,7 @@
 @import"utilities/variables";
+@import"utilities/mapas";
+@import"utilities/extend";
+@import"utilities/mixin";
 
 //Tipo de letra
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
@@ -14,12 +17,9 @@
 
 .contenedor{
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 1.9rem;
-    align-items: center;
+    @extend %flex-c;
     justify-content: space-between;
-
+    gap: 1.9rem;
     //Icono de whatsapp
     .whatsapp{
         display: none;
@@ -28,16 +28,13 @@
     //Header
     .encabezado{
         width: 100%;
-        background-color: $color_encabezado;
+        background-color: map-get($colores,color_encabezado);
 
         height: 14rem;
 
-        display: flex;
+        @extend %flex-r;
 
-        align-items: center;
-        justify-content: center;
-
-        border-bottom: 1px solid $color_encabezado-borde;
+        border-bottom: 1px solid map-get($colores,color_encabezado-borde);
 
         .encabezado__logo{
             width: 40%;
@@ -59,9 +56,9 @@
 
                     a{
                         text-decoration:none;
-                        font-size: 1.4rem;
+                        @include texto(1.4rem);
                         font-weight: 400;
-                        color: $color_encabezado-letra;
+                        color: map-get($colores,color_encabezado-letra);
                     }
                 }
             }
@@ -71,19 +68,16 @@
     //Main
     .principal{
         width: 90%;
-        display: flex;
-        flex-direction: column;
+        @extend %flex-c;
         gap: 1.5rem;
-        align-items: center;
-        justify-content: center;
+
 
         .principal__texto{
-            text-align: center;
-            font-size: 1.3rem;
+            @include texto(1.3rem);
 
             h1{
                 font-size: 3rem;
-                color: $color_seccion;
+                color: map-get($colores,color_seccion);
                 margin-bottom: 0.5rem;
             }
         }
@@ -91,28 +85,32 @@
         .principal__img{
             display: none;
         }
+
+        .card__boton{
+            background-color: map-get($colores,color_encabezado);
+            color: map-get($colores,color_encabezado-letra);
+            border: 1px solid map-get($colores,color_encabezado-borde);
+
+        }
     }
 
     //Section
     .seccion{
-        background-color: $color_seccion;
+        background-color: map-get($colores,color_seccion);
         width: 90%;
-        display: flex;
-        flex-direction: column;
+        @extend %flex-c;
         gap: 1.5rem;
-        align-items: center;
         padding: 1rem 0;
 
         .seccion__texto{
-            text-align: center;
-            color: $color_encabezado-letra;
-            font-size: 1.3rem;
+            @include texto(1.3rem);
+            color: map-get($colores,color_encabezado-letra);
             font-weight: 300;
             width: 70%;
         }
 
         .seccion__titulo{
-            font-size: 2rem;
+            @include texto(2rem);
             font-weight: 400;
             margin-bottom: 0.5rem;
         }
@@ -136,28 +134,24 @@
 
     //Footer
     .pie{
-        display: flex;
-        flex-direction: column;
+        @extend %flex-c;
         width: 100%;
     
-        background-color: $color_encabezado;
-        color: $color_encabezado-letra;
+        background-color: map-get($colores,color_encabezado);
+        color: map-get($colores,color_encabezado-letra);
         padding: 1rem 0;
-        align-items: center;
 
         p{
             margin: 0;
         }
 
         .pie__principal{
-            display: flex;
-            flex-direction: column;
+            @extend %flex-c;
             gap: 1rem;
-            align-items: center;
 
             .pie__texto{
                 .pie__titulo{
-                    font-size: 1rem;
+                    @include texto(1rem);
                 }
             }
             
@@ -166,13 +160,11 @@
             }
             
             .pie__redes{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+                @extend %flex-c;
                 gap: 1rem;
     
                 div{
-                    display: flex;
+                    @extend %flex-r;
     
                     a{
                         margin: 0 2rem;
@@ -184,18 +176,16 @@
         
         
         .pie__derechos{
-            display: flex;
-            justify-content:center;
-            align-items: center;
+            @extend %flex-r;
             margin-top: 1rem;
         }
     }
 
     .seccion__carta{
-        display: flex;
-        justify-content: center;
+        width: 90%;
+        @extend %flex-r;
         .carta{
-            width: 90%;
+            width: 100%;
             font-weight: bold;
             display: grid;
             grid-template-rows: 0.3fr repeat(8,1fr);
@@ -205,10 +195,10 @@
             align-items: center;
         
             row-gap: 1rem;
-            color: $color_encabezado-letra;
+            color: map-get($colores,color_encabezado-letra);
 
             .carta__titulo{
-                font-size: 2.5rem;
+                @include texto(2.5rem);
                 font-weight: 400;
                 margin-bottom: 0.5rem;
                 text-align: center;
@@ -225,28 +215,32 @@
 
 
     //Modificaciones de bootstrap
-    .container-fluid{
-        /* Bootstrap */
-        --bs-gutter-x: 0;
-    }
-    
     .container{
         .row{
             div{
                 .card__boton{
-                    background-color: $color_encabezado-borde;
+                    background-color: map-get($colores,color_encabezado-borde);
                     width: 100%;
                 }
                 
                 .card__espaciado{
-                    display: flex;
-                    flex-direction: column;
+                    @extend %flex-c;
                     justify-content: space-between;
                 }
                 
                 .precio{
-                    color: $color_precio;
+                    color: map-get($colores,color_precio);
                 }
+
+                
+            }
+            .card__titulo{
+                @include texto(2rem);
+                color: map-get($colores,color_seccion);
+            }
+
+            .card__ancho{
+                width: 80%;
             }
         }
     }
@@ -313,6 +307,7 @@
 
         //Carta
         .seccion__carta{
+            width: 75%;
             .carta{
                 grid-template-rows: 0.3fr repeat(4,1fr);
                 grid-template-columns: auto auto;
@@ -417,7 +412,7 @@
 
                     li{
                         padding: 0.5rem;
-                        border:1px solid $color_encabezado;
+                        border:1px solid map-get($colores,color_encabezado);
                         border-radius:1rem;
                     }
                 }
@@ -445,6 +440,9 @@
             .principal__img{
                 display: block;
                 width: 50%;
+            }
+            .card__boton:hover{
+                background-color: map-get($colores,color_encabezado-borde);
             }
         }
 
@@ -570,19 +568,19 @@
         //TRANSFORMACIONES
         .whatsapp:hover{
             transform: rotate(45deg);
-            transition: 0.5s;
+            transition: $tiempo_animacion;
         }
 
         .encabezado{
             .encabezado__logo:hover{
                 transform: scale(1.1);
-                transition: 0.5s;
+                transition: $tiempo_animacion;
             }
             .encabezado__menu{
                 ul{
                     li:hover{
-                        border-color: $color_encabezado-borde;
-                        transition: 0.5s;
+                        border-color: map-get($colores,color_encabezado-borde);
+                        transition: $tiempo_animacion;
                     }
                 }
             }
@@ -592,7 +590,7 @@
             .carta{
                 .seccion__imagenes--carta:hover{
                     transform: scale(1.1);
-                    transition: 0.5s;
+                    transition: $tiempo_animacion;
                 }
             }
         }
@@ -602,7 +600,7 @@
                     div{
                         a:hover{
                             transform: scale(1.1);
-                            transition: 0.5s;
+                            transition: $tiempo_animacion;
                         }
                     }
                 }
