@@ -130,6 +130,18 @@
                 margin:auto;
             }
         }
+
+        .carousel{
+            .carousel-inner{
+                .carousel-item{
+                    .imagen{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     //Footer
@@ -465,6 +477,18 @@
             flex-direction: row;
             padding: 2rem;
             justify-content: center; 
+
+            .carousel{
+                .carousel-inner{
+                    .carousel-item{
+                        .imagen-nos{
+                            img{
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
 
             .seccion__texto{
                 width: 50%;

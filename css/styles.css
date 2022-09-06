@@ -81,6 +81,8 @@
       width: 80%;
       display: block;
       margin: auto; }
+    .contenedor .seccion .carousel .carousel-inner .carousel-item .imagen img {
+      width: 100%; }
   .contenedor .pie {
     width: 100%;
     background-color: #b76bf9;
@@ -246,6 +248,8 @@
       flex-direction: row;
       padding: 2rem;
       justify-content: center; }
+      .contenedor .seccion .carousel .carousel-inner .carousel-item .imagen-nos img {
+        height: 100%; }
       .contenedor .seccion .seccion__texto {
         width: 50%; }
       .contenedor .seccion .seccion__imagenes {
