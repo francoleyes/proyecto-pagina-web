@@ -481,9 +481,19 @@
             .carousel{
                 .carousel-inner{
                     .carousel-item{
+                        .imagen{
+                    
+                            img{
+                                width: 80%;
+                                display:block;
+                                margin:auto;
+                            }
+                        }
                         .imagen-nos{
                             img{
-                                height: 100%;
+                                width: 50%;
+                                display:block;
+                                margin:auto;
                             }
                         }
                     }
