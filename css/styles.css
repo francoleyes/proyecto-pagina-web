@@ -113,6 +113,9 @@
       align-items: center;
       row-gap: 1rem;
       color: whitesmoke; }
+      .contenedor .seccion__carta .carta div a {
+        text-decoration: none;
+        color: whitesmoke; }
       .contenedor .seccion__carta .carta .carta__titulo {
         text-align: center;
         font-size: 2.5rem;
@@ -237,6 +240,8 @@
         width: 50%; }
       .contenedor .principal .card__boton:hover {
         background-color: #4a0072; }
+    .contenedor .principal--btn {
+      flex-direction: column; }
     .contenedor .seccion {
       flex-direction: row;
       padding: 2rem;

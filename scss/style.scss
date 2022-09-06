@@ -197,6 +197,12 @@
             row-gap: 1rem;
             color: map-get($colores,color_encabezado-letra);
 
+            div{
+                a{
+                    text-decoration:none;
+                    color: map-get($colores,color_encabezado-letra);
+                }
+            }
             .carta__titulo{
                 @include texto(2.5rem);
                 font-weight: 400;
@@ -210,6 +216,7 @@
                     text-align: center;
                 }
             }
+
         }
     }
 
@@ -448,6 +455,9 @@
             .card__boton:hover{
                 background-color: map-get($colores,color_encabezado-borde);
             }
+        }
+        .principal--btn{
+            flex-direction: column;
         }
 
         //Section
